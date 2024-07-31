@@ -23,6 +23,18 @@
     background: #555;
 }
 
+@keyframes leftToRight {
+    0% {
+        transform: translateX(-300px);
+        opacity: 0.4;
+    }
+
+    100% {
+        transform: translateX(800px);
+        opacity: 0;
+    }
+}
+
 @layer base {
 
     html,
@@ -53,4 +65,10 @@
         -webkit-backdrop-filter: saturate(3);
         backdrop-filter: saturate(3);
     }
+
+    .pulse {
+        filter: blur(3px);
+        animation: leftToRight 2s infinite;
+    }
+
 }
