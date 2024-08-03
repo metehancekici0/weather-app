@@ -1,30 +1,20 @@
-# React + TypeScript + Vite
+# Weather App (React Vite, Tailwind, TypeScript)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
+It is an application where we can obtain temperature and other weather data of the provinces of Turkey. This project was built using React Vite, Tailwind and TypeScript technologies. Important Note: To run the application smoothly, you must generate your own API key via [@OpenWeather](https://openweathermap.org/).
 
 ```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+VITE_WEATHER_APP_KEY = PUT_HERE_YOUR_API_KEY;
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Technologies and techniques used in the project::
+
+- React Vite
+- TailwindCSS
+- TypeScript
+- Redux (State Management)
+- Skeleton Loading
+- Dark Mode
+- Responsive Design
+- Special SVG Graph
+
+## ScreenShots

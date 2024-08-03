@@ -30,7 +30,7 @@
     }
 
     100% {
-        transform: translateX(800px);
+        transform: translateX(1000px);
         opacity: 0;
     }
 }
@@ -40,19 +40,15 @@
     html,
     body,
     #root {
-        height: 100%;
-        font-family: "Inter", "sans-serif";
+        @apply min-h-full font-inter
     }
 
     input {
-        font-family: "Inter", "sans-serif";
+        @apply font-inter
     }
 }
 
 @layer utilities {
-    .w-500 {
-        width: 500px;
-    }
 
     .light-video:before {
         content: "";
@@ -67,8 +63,77 @@
     }
 
     .pulse {
-        filter: blur(3px);
-        animation: leftToRight 2s infinite;
+        @apply blur-sm animation: leftToRight 2s infinite;
     }
 
+    .graph {
+        @apply relative h-[275px];
+
+        @media only screen and (max-width: 639px) {
+            height: 200px;
+        }
+    }
+
+    .labels {
+        @apply flex w-[calc(100%+20px)] translate-x-[-10px] absolute justify-between left-0 bottom-0 box-border;
+    }
+
+    .points {
+        @apply absolute top-0;
+    }
+
+    .value-box:hover .value {
+        @apply opacity-100
+    }
+
+    .points .value {
+        @apply absolute bottom-full left-1/2 translate-x-[-50%] translate-y-[50%];
+    }
+
+    .points div {
+        --size: 3rem;
+        position: absolute;
+        cursor: pointer;
+        width: var(--size);
+        height: var(--size);
+        top: var(--y);
+        left: var(--x);
+        transform: translate(calc(-0.5 * var(--size)), calc(-0.5 * var(--size)));
+    }
+
+    .marker {
+        @apply absolute flex flex-col items-center pointer-events-none;
+        top: var(--y);
+        left: var(--x);
+        z-index: 2;
+        transform: translate(-50%, -50%);
+    }
+
+    .marker .value {
+        @apply absolute bottom-full translate-y-[-50%] text-black text-[15px];
+    }
+
+    .marker .circle {
+        @apply relative flex top-0 left-0 flex-shrink-0 w-3 h-3 rounded-full bg-white shadow-md;
+    }
+
+    .graph svg {
+        @apply w-full h-full;
+        transform: scaleY(-1);
+    }
+
+    .graph svg path {
+        vector-effect: non-scaling-stroke;
+    }
+
+    .graph svg .stroke {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 0.15rem;
+        pointer-events: none;
+    }
+
+    .graph svg .gradient {
+        pointer-events: none;
+    }
 }

@@ -21,7 +21,12 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    /* JavaScript ve JSX dosyaları için ayarlar */
+    "allowJs": true, // JavaScript ve JSX dosyalarını dahil et
+    "checkJs": false // İsteğe bağlı, JavaScript dosyalarında tip kontrolünü devre dışı bırakır
   },
-  "include": ["src"]
+  "include": ["src", "declarations.d.ts"],
+  "exclude": ["node_modules"]
 }

@@ -1,3 +1,8 @@
+export interface citiesType {
+  id: number;
+  name: string;
+}
+
 export interface WeatherData {
   list: Array<{
     dt: number;
@@ -25,4 +30,27 @@ export interface WeatherState {
   weatherData: WeatherData | null;
   weatherIcon: string;
   status: "empty" | "loading" | "succeeded" | "failed";
+  labels: string[];
+  data: number[];
+  selectedDay: string;
+  pointData: pointDataType;
+  graphPosition: graphPositionType;
+}
+export type graphPositionType = {
+  path: number;
+  point: number;
+};
+export type pointDataType = {
+  clock: string;
+  temp: number;
+};
+
+export interface WeatherEntry {
+  dt: number;
+  main: {
+    temp: number;
+  };
+  weather: {
+    icon: string;
+  }[];
 }

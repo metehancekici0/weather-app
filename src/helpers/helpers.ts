@@ -43,3 +43,20 @@ export const iconcodeToIcon = (iconcode: string): string => {
       return "clear.png";
   }
 };
+
+export const formatNumber = (value: number): number => {
+  const roundedValue = Math.round(value * 10) / 10;
+  const decimalPart = roundedValue - Math.floor(roundedValue);
+
+  if (decimalPart <= 0.05) {
+    return Math.floor(roundedValue);
+  }
+
+  return roundedValue;
+};
+
+export function dateToDayOfWeek(dateString: string): string {
+  const date = new Date(dateString);
+  const options: Intl.DateTimeFormatOptions = { weekday: "long" };
+  return date.toLocaleDateString("en-US", options);
+}
