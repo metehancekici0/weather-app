@@ -63,7 +63,8 @@
     }
 
     .pulse {
-        @apply blur-sm animation: leftToRight 2s infinite;
+        animation: leftToRight 2s infinite;
+        filter: blur(3px);
     }
 
     .graph {

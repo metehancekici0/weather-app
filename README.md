@@ -6,7 +6,7 @@ It is an application where we can obtain temperature and other weather data of t
 VITE_WEATHER_APP_KEY = PUT_HERE_YOUR_API_KEY;
 ```
 
-Technologies and techniques used in the project::
+Technologies and techniques used in the project:
 
 - React Vite
 - TailwindCSS

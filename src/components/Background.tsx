@@ -34,7 +34,7 @@ export default function Background() {
       </div>
       <button
         onClick={toggleDarkMode}
-        className="fixed bottom-7 right-7 rounded-full w-14 h-14 text-2xl flex items-center justify-center bg-white/70 backdrop-blur-lg outline-none"
+        className="fixed bottom-7 right-7 rounded-full w-14 h-14 text-2xl flex items-center justify-center bg-white/50 backdrop-blur-sm outline-none"
       >
         {darkMode ? <IoSunny /> : <IoMoonOutline />}
       </button>

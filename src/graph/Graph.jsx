@@ -52,8 +52,8 @@ const Points = ({ data, width, height, graphPosition, dispatch, range }) => {
               onClick={() => activate(r, i)}
             >
               <span className={`value flex sm:block ${i == point ? "text-black/100 dark:text-white/100" : "text-black/60 dark:text-white/60"}`}>
-                <span className="text-base sm:text-sm">{row[i]}</span>
-                <span className="text-xs mt-1">°C</span>
+                <span className="text-base sm:text-[9px]">{row[i]}</span>
+                <span className="text-xs mt-1 sm:text-[8px]">°C</span>
               </span>
             </div>
           );
@@ -88,7 +88,7 @@ const Graph = ({ data = [], colors, dispatch, graphPosition, range, labels }) =>
   const { width, height } = useDimensions(graph);
 
   return (
-    <section className="p-10 sm:p-8 mb-5 rounded-md">
+    <section className="p-10 sm:p-5 mb-5 rounded-md">
       <div className="graph" ref={graph}>
         <Marker colors={colors} data={data} graphPosition={graphPosition} width={width} height={height} range={range} />
         <svg viewBox={`0 ${range[0]} 100 ${range[1]}`} preserveAspectRatio="none">
@@ -98,7 +98,7 @@ const Graph = ({ data = [], colors, dispatch, graphPosition, range, labels }) =>
         </svg>
         <div className="labels">
           {labels.map((label, index) => (
-            <div key={`${label}-${index}`} className="text-black dark:text-white text-sm sm:text-xs">
+            <div key={`${label}-${index}`} className="text-black dark:text-white text-sm sm:text-[8px]">
               {label}
             </div>
           ))}
