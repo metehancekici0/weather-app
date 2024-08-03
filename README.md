@@ -18,3 +18,6 @@ Technologies and techniques used in the project:
 - Special SVG Graph
 
 ## ScreenShots
+![image](https://github.com/user-attachments/assets/2d9a2a48-11be-42a6-ba40-1ed35abba7d2)
+![image](https://github.com/user-attachments/assets/03cec54a-2275-4e3f-9346-a52defea6ac4)
+![image](https://github.com/user-attachments/assets/0dce5e53-7b8a-4a56-8623-7952c6985e89)
